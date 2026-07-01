@@ -1,0 +1,66 @@
+const COLORS = {
+  BACKGROUND: '#F2F2F7',
+  BACKGROUND_DARK: '#000000',
+  SURFACE: '#FFFFFF',
+  SURFACE_DARK: '#1C1C1E',
+  FOREGROUND: '#000000',
+  LABEL: '#3C3C43',
+  LABEL_SECONDARY: '#8E8E93',
+  PRIMARY: '#007AFF',
+  PRIMARY_FOREGROUND: '#FFFFFF',
+  FILL: 'rgba(120, 120, 128, 0.12)',
+  FILL_DARK: '#2C2C2E',
+  SEPARATOR: 'rgba(60, 60, 67, 0.29)',
+  DESTRUCTIVE: '#FF3B30',
+  DESTRUCTIVE_FOREGROUND: '#FFFFFF',
+  SUCCESS: '#34C759',
+  SUCCESS_FOREGROUND: '#FFFFFF',
+  WARNING: '#FF9500',
+  WARNING_FOREGROUND: '#FFFFFF',
+  SHADOW: '#000000',
+} as const;
+
+const TAILWIND_COLORS = {
+  background: {
+    DEFAULT: COLORS.BACKGROUND,
+    dark: COLORS.BACKGROUND_DARK,
+  },
+  surface: {
+    DEFAULT: COLORS.SURFACE,
+    dark: COLORS.SURFACE_DARK,
+  },
+  foreground: COLORS.FOREGROUND,
+  label: COLORS.LABEL,
+  'label-secondary': COLORS.LABEL_SECONDARY,
+  primary: {
+    DEFAULT: COLORS.PRIMARY,
+    foreground: COLORS.PRIMARY_FOREGROUND,
+  },
+  fill: {
+    DEFAULT: COLORS.FILL,
+    dark: COLORS.FILL_DARK,
+  },
+  separator: COLORS.SEPARATOR,
+  destructive: {
+    DEFAULT: COLORS.DESTRUCTIVE,
+    foreground: COLORS.DESTRUCTIVE_FOREGROUND,
+  },
+  success: {
+    DEFAULT: COLORS.SUCCESS,
+    foreground: COLORS.SUCCESS_FOREGROUND,
+  },
+  warning: {
+    DEFAULT: COLORS.WARNING,
+    foreground: COLORS.WARNING_FOREGROUND,
+  },
+  muted: {
+    DEFAULT: COLORS.FILL,
+    foreground: COLORS.LABEL_SECONDARY,
+  },
+  shadow: COLORS.SHADOW,
+} as const;
+
+export default {
+  COLORS,
+  TAILWIND_COLORS,
+};
