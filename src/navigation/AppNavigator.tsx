@@ -5,11 +5,11 @@ import { HomeScreen } from "modules/Home";
 import UI from "modules/UI/const";
 
 import type { RootStackParamList } from "navigation";
+import { TodoScreen } from "modules/Todo/screens/TodoScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const HEADER_OPTIONS = {
-    title: "Sample App",
     headerLargeTitleEnabled: true,
     headerTransparent: true,
     headerBlurEffect: Platform.OS === "ios" ? "systemChromeMaterial" : undefined,
@@ -27,7 +27,8 @@ const HEADER_OPTIONS = {
 export function AppNavigator() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} options={HEADER_OPTIONS} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{ ...HEADER_OPTIONS, title: "Sample App" }} />
+            <Stack.Screen name="Todos" component={TodoScreen} options={{ ...HEADER_OPTIONS, title: "Todos" }} />
         </Stack.Navigator>
     );
 }
