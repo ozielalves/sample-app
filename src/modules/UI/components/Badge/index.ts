@@ -1,3 +1,3 @@
-export { Badge } from 'modules/UI/components/Badge/Badge';
+export { Badge } from "modules/UI/components/Badge/Badge";
 
-export type * from 'modules/UI/components/Badge/types';
+export type * from "modules/UI/components/Badge/types";

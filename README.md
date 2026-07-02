@@ -64,17 +64,17 @@ sample-app/
 
 ## React → React Native mental models
 
-| React Web          | React Native                   | Senior note |
-| ------------------ | ------------------------------ | ----------- |
-| `div`, `span`, `p` | `View`, `Text`                 | All text must be inside `<Text>` |
-| `className` + CSS  | `style` + `StyleSheet.create`  | No cascade; default flex direction is **column** |
-| `onClick`          | `onPress` on `Pressable`       | Prefer `Pressable` over `TouchableOpacity` |
-| `input`            | `TextInput`                    | Keyboard + `KeyboardAvoidingView` |
-| `img`              | `Image`                        | Set `width`/`height` or `aspectRatio` |
-| `ul` + `.map()`    | `FlatList` / `SectionList`     | Never `ScrollView` + map for long lists |
-| `localStorage`     | `AsyncStorage` / MMKV          | Async, not synchronous |
-| React Router       | React Navigation / Expo Router | Blank apps usually use React Navigation stack |
-| `hover:`           | Press states                   | `Pressable style={({ pressed }) => ...}` |
+| React Web          | React Native                   | Senior note                                          |
+| ------------------ | ------------------------------ | ---------------------------------------------------- |
+| `div`, `span`, `p` | `View`, `Text`                 | All text must be inside `<Text>`                     |
+| `className` + CSS  | `style` + `StyleSheet.create`  | No cascade; default flex direction is **column**     |
+| `onClick`          | `onPress` on `Pressable`       | Prefer `Pressable` over `TouchableOpacity`           |
+| `input`            | `TextInput`                    | Keyboard + `KeyboardAvoidingView`                    |
+| `img`              | `Image`                        | Set `width`/`height` or `aspectRatio`                |
+| `ul` + `.map()`    | `FlatList` / `SectionList`     | Never `ScrollView` + map for long lists              |
+| `localStorage`     | `AsyncStorage` / MMKV          | Async, not synchronous                               |
+| React Router       | React Navigation / Expo Router | Blank apps usually use React Navigation stack        |
+| `hover:`           | Press states                   | `Pressable style={({ pressed }) => ...}`             |
 | Browser layout     | Safe areas                     | `SafeAreaView` from `react-native-safe-area-context` |
 
 ### FlatList checklist (say out loud)
@@ -138,18 +138,31 @@ return <FlatList data={data} ... />;
 
 ```tsx
 import {
-  View, Text, FlatList, Pressable, TextInput, StyleSheet,
-  ActivityIndicator, RefreshControl, KeyboardAvoidingView, Platform,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+  View,
+  Text,
+  FlatList,
+  Pressable,
+  TextInput,
+  StyleSheet,
+  ActivityIndicator,
+  RefreshControl,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 ```
 
 ```tsx
-import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+} from "@testing-library/react-native";
 
-it('renders', () => {
+it("renders", () => {
   render(<MyComponent />);
-  expect(screen.getByText('Hello')).toBeTruthy();
+  expect(screen.getByText("Hello")).toBeTruthy();
 });
 ```
 
@@ -218,22 +231,22 @@ Timer on. Exercises 1→4 from scratch. Goal: 50 min, 2 tests, clean PascalCase 
 
 ### Today (~2h)
 
-| Time | Activity |
-| ---- | -------- |
-| 0:00–0:20 | Run app + simulator, review folder scaffold |
+| Time      | Activity                                                 |
+| --------- | -------------------------------------------------------- |
+| 0:00–0:20 | Run app + simulator, review folder scaffold              |
 | 0:20–0:40 | Mental model table; practice 3 flex layouts in `App.tsx` |
-| 0:40–1:10 | **Exercise 1** — static FlatList + 1 test |
-| 1:10–1:45 | **Exercise 2** — fetch hook + 4 states + 1 test |
-| 1:45–2:00 | Record yourself explaining Exercise 2 (2 min) |
+| 0:40–1:10 | **Exercise 1** — static FlatList + 1 test                |
+| 1:10–1:45 | **Exercise 2** — fetch hook + 4 states + 1 test          |
+| 1:45–2:00 | Record yourself explaining Exercise 2 (2 min)            |
 
 ### Tomorrow (~2h)
 
-| Time | Activity |
-| ---- | -------- |
+| Time      | Activity                          |
+| --------- | --------------------------------- |
 | 0:00–0:30 | **Exercise 3** — navigation stack |
-| 0:30–1:05 | **Exercise 4** — form + keyboard |
+| 0:30–1:05 | **Exercise 4** — form + keyboard  |
 | 1:05–1:30 | **Exercise 5** — refresh + toggle |
-| 1:30–2:00 | **Exercise 6** — timed mock |
+| 1:30–2:00 | **Exercise 6** — timed mock       |
 
 ### Thursday before 9:30 (10 min)
 

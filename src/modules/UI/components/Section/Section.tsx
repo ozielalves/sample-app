@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text, View } from "react-native";
 
 type SectionProps = {
   title?: string;
@@ -7,7 +7,12 @@ type SectionProps = {
   className?: string;
 };
 
-export function Section({ title, footer, children, className = '' }: SectionProps) {
+export function Section({
+  title,
+  footer,
+  children,
+  className = "",
+}: SectionProps) {
   return (
     <View className={`gap-2 ${className}`}>
       {title ? (
@@ -16,7 +21,11 @@ export function Section({ title, footer, children, className = '' }: SectionProp
         </Text>
       ) : null}
       {children}
-      {footer ? <Text className="px-8 text-footnote text-label-secondary">{footer}</Text> : null}
+      {footer ? (
+        <Text className="px-8 text-footnote text-label-secondary">
+          {footer}
+        </Text>
+      ) : null}
     </View>
   );
 }

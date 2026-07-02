@@ -1,1 +1,1 @@
-export type TextInputVariant = 'default' | 'error';
+export type TextInputVariant = "default" | "error";

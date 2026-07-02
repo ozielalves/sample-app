@@ -1,7 +1,10 @@
-import { Pressable, Text, type PressableProps } from 'react-native';
+import { Pressable, Text, type PressableProps } from "react-native";
 
-import ButtonConst from 'modules/UI/components/Button/const';
-import type { ButtonSize, ButtonVariant } from 'modules/UI/components/Button/types';
+import ButtonConst from "modules/UI/components/Button/const";
+import type {
+  ButtonSize,
+  ButtonVariant,
+} from "modules/UI/components/Button/types";
 
 type ButtonProps = PressableProps & {
   label: string;
@@ -12,20 +15,22 @@ type ButtonProps = PressableProps & {
 
 export function Button({
   label,
-  variant = 'primary',
-  size = 'md',
+  variant = "primary",
+  size = "md",
   disabled,
-  className = '',
+  className = "",
   ...props
 }: ButtonProps) {
   return (
     <Pressable
       accessibilityRole="button"
       disabled={disabled}
-      className={`items-center justify-center ${ButtonConst.BUTTON_SIZES[size]} ${ButtonConst.BUTTON_VARIANTS[variant]} ${disabled ? 'opacity-50' : ''} ${className}`}
+      className={`items-center justify-center ${ButtonConst.BUTTON_SIZES[size]} ${ButtonConst.BUTTON_VARIANTS[variant]} ${disabled ? "opacity-50" : ""} ${className}`}
       {...props}
     >
-      <Text className={`${ButtonConst.BUTTON_TEXT_SIZES[size]} ${ButtonConst.BUTTON_TEXT_VARIANTS[variant]}`}>
+      <Text
+        className={`${ButtonConst.BUTTON_TEXT_SIZES[size]} ${ButtonConst.BUTTON_TEXT_VARIANTS[variant]}`}
+      >
         {label}
       </Text>
     </Pressable>

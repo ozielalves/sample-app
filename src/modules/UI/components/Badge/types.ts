@@ -1,1 +1,2 @@
-export type BadgeVariant = 'default' | 'primary' | 'success' | 'warning' | 'destructive';
+export type BadgeVariant =
+  "default" | "primary" | "success" | "warning" | "destructive";

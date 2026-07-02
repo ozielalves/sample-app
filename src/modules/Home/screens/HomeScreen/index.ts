@@ -1,1 +1,1 @@
-export { HomeScreen } from 'modules/Home/screens/HomeScreen/HomeScreen';
+export { HomeScreen } from "modules/Home/screens/HomeScreen/HomeScreen";

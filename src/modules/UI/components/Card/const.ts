@@ -1,6 +1,6 @@
-import { Platform, type ViewStyle } from 'react-native';
+import { Platform, type ViewStyle } from "react-native";
 
-import UIConst from 'modules/UI/const';
+import UIConst from "modules/UI/const";
 
 const IOS_CARD_SHADOW: ViewStyle =
   Platform.select({

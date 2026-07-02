@@ -1,10 +1,10 @@
-import './global.css';
+import "./global.css";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { AppNavigator } from 'navigation';
+import { AppNavigator } from "navigation";
 
 export default function App() {
   return (
